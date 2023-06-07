@@ -23,10 +23,10 @@ The original copy of this project can be viewed at: https://github.com/michaelpa
 <br/>
 
 
-# Application Deployment in AWS – EC2 "OR" 
- Three tier web Application Deployment in AWS – EC2 "OR"
- Node.js, Angular.js, MySQL-based Web Application deployment in AWS – EC2 "OR"
- Frontend, Backend and Database based web Application deployment in AWS – EC2
+# Application Deployment in AWS – EC2 
+ "OR" Three tier web Application Deployment in AWS – EC2 
+ "OR" Node.js, Angular.js, MySQL-based Web Application deployment in AWS – EC2 
+ "OR" Frontend, Backend and Database based web Application deployment in AWS – EC2
 
 
 Here we are using one EC2 instance to install the frontend, backend, and database. 
