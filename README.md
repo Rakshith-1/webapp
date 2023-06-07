@@ -24,9 +24,9 @@ The original copy of this project can be viewed at: https://github.com/michaelpa
 
 
 # Application Deployment in AWS – EC2 "OR" 
-# Three tier web Application Deployment in AWS – EC2 "OR"
-# Node.js, Angular.js, MySQL-based Web Application deployment in AWS – EC2 "OR"
-# Frontend, Backend and Database based web Application deployment in AWS – EC2
+ Three tier web Application Deployment in AWS – EC2 "OR"
+ Node.js, Angular.js, MySQL-based Web Application deployment in AWS – EC2 "OR"
+ Frontend, Backend and Database based web Application deployment in AWS – EC2
 
 
 Here we are using one EC2 instance to install the frontend, backend, and database. 
@@ -107,6 +107,7 @@ select * from users;
 cd /home/webapp/angular-ecommerce-app/backend/env
 
 [root@ip-172-31-80-191 env]# cat production.env 
+
 PORT=5000
 DB_HOST='localhost'
 DB_USER='root'
