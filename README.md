@@ -18,6 +18,7 @@ Adding products to your cart will make a notification pop up and indicate that t
 You are able to see a preview of the cart on the top bar or even navigate into a more detailed cart page.
 
 The checkout process is a multi-page form that at the end allows you to place an order that will later be shown on the order history page.
+
 The original copy of this project can be viewed at: https://github.com/michaelparkadze/angular-ecommerce-app.git
 
 <br/>
