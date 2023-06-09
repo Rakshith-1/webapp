@@ -28,6 +28,7 @@ Click below links for the steps to Deploy this application.
 --------------------------------------------------------------
 
 
-# Three tier web Application Deployment in AWS – EC2 : https://techieinterest.com/three-tier-web-application-deployment-in-aws-ec2/
+# Three tier web Application Deployment in AWS – EC2:
+https://techieinterest.com/three-tier-web-application-deployment-in-aws-ec2/
 
 
