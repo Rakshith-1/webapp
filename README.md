@@ -24,9 +24,10 @@ The original copy of this project can be viewed at: https://github.com/michaelpa
 <br/>
 
 
-# Click below links for the steps to Deploy this application. 
+Click below links for the steps to Deploy this application. 
+--------------------------------------------------------------
 
 
-Three tier web Application Deployment in AWS – EC2 : https://techieinterest.com/three-tier-web-application-deployment-in-aws-ec2/
+# Three tier web Application Deployment in AWS – EC2 : https://techieinterest.com/three-tier-web-application-deployment-in-aws-ec2/
 
 
