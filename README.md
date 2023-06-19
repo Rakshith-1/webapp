@@ -27,8 +27,18 @@ The original copy of this project can be viewed at: https://github.com/michaelpa
 Click below links for the steps to Deploy this application. 
 --------------------------------------------------------------
 
+# Highly Available, Fault-tolerant, 3-tier E-Commerce web Application Deployment in AWS- using various AWS services
 
-# Three tier web Application Deployment in AWS – EC2:
-https://techieinterest.com/three-tier-web-application-deployment-in-aws-ec2/
+Here we are using various services of AWS like – Route53, VPC, RDS, EC2 – Launch Template, EC2 – AutoScaling Group, Ec2 – Load Balancer, and EC2 – Instances. 
+For steps visit page: https://devopsinterview.in/highly-available-fault-tolerant-live-e-commerce-web-application-deployment-in-aws/ 
+
+
+# Three-tier Web Application Deployment in a single instance of AWS – EC2
+
+Here for testing/learning purposes, we are using just one EC2 instance to install the frontend, backend, and database.
+For steps visit the page: https://devopsinterview.in/three-tier-web-application-deployment-in-aws-ec2/
+
+
+ Please feel free to contact us for any queries: https://devopsinterview.in/contact-us/ 
 
 
