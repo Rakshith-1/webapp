@@ -32,7 +32,7 @@ Click the below links for the steps to Deploy this application.
 <br>
 
 Here we are using various services of AWS like – Route53, VPC, RDS, EC2 – Launch Template, EC2 – AutoScaling Group, Ec2 – Load Balancer, and EC2 – Instances. 
-<br>For steps visit page: https://devopsinterview.in/highly-available-fault-tolerant-live-e-commerce-web-application-deployment-in-aws/ 
+<br>For steps visit page: https://devopsinterview.in/ha-fault-tolerant-web-app-deployment-in-aws/ 
 
 <br>
 <br>
