@@ -1,3 +1,4 @@
+
 - vi examples.tfvars    - this file needs to be updated as per user config/zone
 
 - terraform init
