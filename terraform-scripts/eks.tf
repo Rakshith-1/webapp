@@ -1,3 +1,4 @@
+
 #
 # Control Plane Resources
 #
@@ -166,4 +167,46 @@ resource "aws_eks_node_group" "k8s" {
     aws_iam_role_policy_attachment.cni_policy,
     aws_iam_role_policy_attachment.ecr_read_only,
   ]
+}
+
+provider "null" {}
+
+resource "null_resource" "update_kubeconfig" {
+  provisioner "local-exec" {
+    command = "aws eks --region=${var.aws_region} update-kubeconfig --name ${var.cluster_name} --alias iams"
+  }
+
+  depends_on = [aws_eks_cluster.k8s]
+}
+
+resource "null_resource" "install_helm_release1" {
+  provisioner "local-exec" {
+    command = "helm install my-release-fe s3://helmcharts-s3/frontend-chart/frontend-0.1.0.tgz"
+  }
+
+  depends_on = [null_resource.update_kubeconfig]
+}
+
+resource "null_resource" "install_helm_release2" {
+  provisioner "local-exec" {
+    command = "helm install my-release-be s3://helmbackends3/backend-chart/backend-0.1.0.tgz"
+  }
+
+  depends_on = [null_resource.update_kubeconfig]
+}
+
+resource "null_resource" "uninstall_fe_release" {
+  provisioner "local-exec" {
+    # Uninstall Helm chart during resource destruction
+    when    = destroy
+    command = "helm uninstall my-release-fe"
+  }
+}
+
+resource "null_resource" "uninstall_be_release" {
+  provisioner "local-exec" {
+    # Uninstall Helm chart during resource destruction
+    when    = destroy
+    command = "helm uninstall my-release-be"
+  }
 }
