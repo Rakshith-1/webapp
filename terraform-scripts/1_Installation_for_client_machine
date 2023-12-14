@@ -40,3 +40,24 @@ cp /usr/local/bin/helm $HOME/bin/helm && export PATH=$HOME/bin:$PATH
 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 helm version
  
+
+
+7. Install Grafana 
+wget https://dl.grafana.com/enterprise/release/grafana-enterprise-10.2.2.linux-amd64.tar.gz
+tar -zxvf grafana-enterprise-10.2.2.linux-amd64.tar.gz
+mkdir -p /opt/grafana
+mv grafana-v10.2.2/ /opt/grafana/
+cd /opt/grafana/grafana-v10.2.2/bin/
+nohup ./grafana-server &
+Username: admin
+Password: admin
+
+
+7. Install Prometheus
+cd /home/ec2-user/web-app-deployment-on-cloud/terraform-scripts/prometheus
+vi prometheus.yaml
+kubectl apply -f prometheus.yaml
+vi prometheus-service.yaml
+kubectl apply -f prometheus-service.yaml
+kubectl get services prometheus-service -o wide
+(grafana-import-dashboard- number - 1860 and then select prometheus )
