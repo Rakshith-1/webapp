@@ -1,0 +1,5 @@
+replicaCount: 3 
+fullname: backend
+image: 
+  repository: 557792715966.dkr.ecr.us-east-1.amazonaws.com/webappecr 
+  tag: be
