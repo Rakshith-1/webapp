@@ -1,5 +1,5 @@
-replicaCount: 3 
+replicaCount: 3
 fullname: backend
-image: 
-  repository: 557792715966.dkr.ecr.us-east-1.amazonaws.com/webappecr 
-  tag: be
+image:
+  repository: 976995869248.dkr.ecr.ap-south-1.amazonaws.com/shoewebapp
+  tag: webappss-be
