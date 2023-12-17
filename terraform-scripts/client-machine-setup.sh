@@ -9,7 +9,7 @@ chmod +x ./eksctl; mkdir -p $HOME/bin && cp ./eksctl $HOME/bin/eksctl && export 
 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 eksctl version
 
-yum install docker 
+yum install docker -y
 
 wget https://releases.hashicorp.com/terraform/1.6.5/terraform_1.6.5_linux_amd64.zip
 unzip terraform_1.6.5_linux_amd64.zip
@@ -20,6 +20,9 @@ terraform -v
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh
 chmod 700 get_helm.sh
 DESIRED_VERSION=v3.8.2 bash get_helm.sh
-cp /usr/local/bin/helm $HOME/bin/helm && export PATH=$HOME/bin:$PATH
-echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+cp /usr/local/bin/helm $HOME/bin/helm
+sleep 5
+export PATH=$HOME/bin:$PATH;echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 helm version
+
+helm plugin install https://github.com/hypnoglow/helm-s3.git
