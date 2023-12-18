@@ -166,6 +166,7 @@ resource "aws_eks_node_group" "k8s" {
     aws_iam_role_policy_attachment.worker_node_policy,
     aws_iam_role_policy_attachment.cni_policy,
     aws_iam_role_policy_attachment.ecr_read_only,
+    aws_eks_cluster.k8s,
   ]
 }
 
@@ -176,12 +177,12 @@ resource "null_resource" "update_kubeconfig" {
     command = "aws eks --region=${var.aws_region} update-kubeconfig --name ${var.cluster_name} --alias iams"
   }
 
-  depends_on = [aws_eks_cluster.k8s]
+  depends_on = [aws_eks_node_group.k8s]
 }
 
 resource "null_resource" "install_helm_release1" {
   provisioner "local-exec" {
-    command = "helm install my-release-fe s3://frontendchartrakshit/frontend-foldername/frontend-0.1.0.tgz"
+    command = "helm install my-release-fe s3://frontendchartsushil/frontend-foldername/frontend-0.1.0.tgz"
   }
 
   depends_on = [null_resource.update_kubeconfig]
@@ -189,7 +190,7 @@ resource "null_resource" "install_helm_release1" {
 
 resource "null_resource" "install_helm_release2" {
   provisioner "local-exec" {
-    command = "helm install my-release-be s3://backendchartrakshit/backend-foldername/backend-0.1.0.tgz"
+    command = "helm install my-release-be s3://backendchartsushil/backend-foldername/backend-0.1.0.tgz"
   }
 
   depends_on = [null_resource.update_kubeconfig]
