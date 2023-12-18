@@ -3,8 +3,9 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 kubectl get deployment metrics-server -n kube-system
 
 2. Install Prometheus
-Creating the Amazon EBS CSI driver IAM role: https://docs.aws.amazon.com/eks/latest/userguide/csi-iam-role.html
-Managing the Amazon EBS CSI driver as an Amazon EKS add-on: https://docs.aws.amazon.com/eks/latest/userguide/managing-ebs-csi.html
+-Instead of the step in this amazon page: Creating the Amazon EBS CSI driver IAM role: https://docs.aws.amazon.com/eks/latest/userguide/csi-iam-role.html
+Add AmazonEBSCSIDriverPolicy policy in node-group role i.e. noderole
+-Managing the Amazon EBS CSI driver as an Amazon EKS add-on: https://docs.aws.amazon.com/eks/latest/userguide/managing-ebs-csi.html
 kubectl create namespace prometheus
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm upgrade -i prometheus prometheus-community/prometheus \
