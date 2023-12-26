@@ -62,9 +62,11 @@ Add dashboard : 3119 and select prometheus
 
 
 
-4. To Uninstall Prometheus and Grafana
+4. To Uninstall Prometheus, Grafana and k8s metrics server
 helm uninstall prometheus --namespace prometheus
 helm uninstall grafana --namespace grafana
+kubectl delete -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
 
 Delete from Amazon console - go to AWS EKS - Add-on - Delete manually added aws-ebs-csi-driver
 
