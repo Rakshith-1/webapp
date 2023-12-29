@@ -25,7 +25,7 @@ RUN apk --no-cache add mysql mysql-client
 
 # Clone your Node.js application repository
 WORKDIR /home/webapp
-RUN git clone https://github.com/techieinterest/web-app-deployment-on-cloud.git --no-cache
+RUN git clone https://github.com/techieinterest/web-app-deployment-on-cloud.git
 
 # Install dependencies for your Node.js application
 WORKDIR /home/webapp/web-app-deployment-on-cloud/backend
