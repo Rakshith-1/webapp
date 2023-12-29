@@ -21,9 +21,7 @@ RUN curl -o install.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/inst
 	
 # Create a directory for your Node.js application
 WORKDIR /home/webapp
-RUN git clone --no-checkout https://github.com/techieinterest/web-app-deployment-on-cloud.git
-RUN git checkout main
-
+RUN git clone --no-checkout https://github.com/techieinterest/web-app-deployment-on-cloud.git --no-cache
 
 #Install node modules as mentioned in package.json in the client folder
 WORKDIR /home/webapp/web-app-deployment-on-cloud/client
