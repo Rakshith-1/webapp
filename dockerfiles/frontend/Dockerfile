@@ -31,7 +31,7 @@ RUN npm install
 WORKDIR /home/webapp/web-app-deployment-on-cloud/client/src/environments
 RUN echo "export const environment = {" > environment.prod.ts && \
     echo "production: true," >> environment.prod.ts && \
-    echo "apiUrl: 'http://back.techiematerials.com:5000/api/v1/'," >> environment.prod.ts && \
+    echo "apiUrl: 'http://back.devopsify.co.in:5000/api/v1/'," >> environment.prod.ts && \
     echo "};" >> environment.prod.ts
 
 # Copy nginx.conf file from /home/webapp/web-app-deployment-on-cloud/nginx.conf
