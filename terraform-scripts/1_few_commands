@@ -1,6 +1,6 @@
 - vi examples.tfvars    - this file needs to be updated as per user config/zone
 
-- terraform init  or    terraform init -backend-config="bucket=my-terraform-webapps-bucket" -backend-config="key=terraform.tfstate"
+- terraform init
 - terraform apply -var-file=examples.tfvars
 - terraform plan -var-file=examples.tfvars
 - terraform destroy -var-file=examples.tfvars
