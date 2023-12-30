@@ -182,7 +182,7 @@ resource "null_resource" "update_kubeconfig" {
 
 resource "null_resource" "install_helm_release1" {
   provisioner "local-exec" {
-    command = "helm install my-release-fe s3://frontendchartrakshit/frontend-foldername/frontend-0.1.0.tgz"
+    command = "sudo -u root helm install my-release-fe s3://frontendchartrakshit/frontend-foldername/frontend-0.1.0.tgz"
   }
 
   depends_on = [null_resource.update_kubeconfig]
@@ -190,7 +190,7 @@ resource "null_resource" "install_helm_release1" {
 
 resource "null_resource" "install_helm_release2" {
   provisioner "local-exec" {
-    command = "helm install my-release-be s3://backendchartrakshit/backend-foldername/backend-0.1.0.tgz"
+    command = "sudo -u root helm install my-release-be s3://backendchartrakshit/backend-foldername/backend-0.1.0.tgz"
   }
 
   depends_on = [null_resource.update_kubeconfig]
@@ -200,7 +200,7 @@ resource "null_resource" "uninstall_fe_release" {
   provisioner "local-exec" {
     # Uninstall Helm chart during resource destruction
     when    = destroy
-    command = "helm uninstall my-release-fe"
+    command = "sudo -u root helm uninstall my-release-fe"
   }
 }
 
@@ -208,6 +208,6 @@ resource "null_resource" "uninstall_be_release" {
   provisioner "local-exec" {
     # Uninstall Helm chart during resource destruction
     when    = destroy
-    command = "helm uninstall my-release-be"
+    command = "sudo -u root helm uninstall my-release-be"
   }
 }
