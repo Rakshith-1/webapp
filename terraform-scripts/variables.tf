@@ -3,6 +3,11 @@ variable "cluster_name" {
   type        = string
 }
 
+variable "aws_tfbucket" {
+  description = "The s3 bucket to store terraform state file"
+  type        = string
+}
+
 variable "aws_profile" {
   description = "The AWS CLI profile to use"
   type        = string
