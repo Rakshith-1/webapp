@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "my-terraform-webapps-bucket"
+    bucket         = "var.aws_tfbucket"
     key            = "terraform.tfstate"
-    region         = "ap-south-1"
+    region         = var.aws_region
     encrypt        = true
   }
 }
