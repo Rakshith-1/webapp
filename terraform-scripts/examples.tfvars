@@ -2,15 +2,14 @@ cluster_name = "webapp-dev"
 
 # AWS CLI config profile
 aws_profile = "default"
-aws_region  = "ap-south-1"
-aws_tfbucket = "my-terraform-webapps-bucket"
+aws_region  = "us-east-1"
 
 ec2_key_name = ""
 ec2_key      = ""
 
 vpc_cidr                 = "10.4.20.0/24"
-vpc_az1                  = "ap-south-1a"
-vpc_az2                  = "ap-south-1b"
+vpc_az1                  = "us-east-1a"
+vpc_az2                  = "us-east-1b"
 vpc_public_subnet1_cidr  = "10.4.20.0/26"
 vpc_public_subnet2_cidr  = "10.4.20.64/26"
 vpc_private_subnet1_cidr = "10.4.20.128/26"
