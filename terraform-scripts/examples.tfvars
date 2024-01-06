@@ -3,6 +3,7 @@ cluster_name = "webapp-dev"
 # AWS CLI config profile
 aws_profile = "default"
 aws_region  = "ap-south-1"
+aws_tfbucket = "my-terraform-webapps-bucket"
 
 ec2_key_name = ""
 ec2_key      = ""
